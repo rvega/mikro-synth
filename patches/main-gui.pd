@@ -1,0 +1,52 @@
+#N canvas 661 51 320 175 10;
+#N canvas 519 22 462 346 gui 1;
+#X obj 57 170 hradio 15 1 0 7 empty empty Modo 0 -8 0 10 -262144 -1
+-1 0;
+#X obj 56 134 hradio 15 1 0 8 empty empty Octava 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 59 206 hradio 15 1 0 7 empty empty Grado 0 -8 0 10 -262144 -1
+-1 0;
+#X obj 235 134 hradio 15 1 0 4 empty empty Arpegio 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 237 167 bng 15 250 50 0 empty empty Tempo 17 7 0 10 -262144
+-1 -1;
+#X obj 236 206 hradio 15 1 0 2 empty empty Forma\ de\ onda 0 -8 0 10
+-262144 -1 -1 0;
+#X obj 177 235 hradio 15 1 0 2 empty empty off/on 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 113 364 dsp;
+#X msg 25 269 octava \$1;
+#X msg 35 292 modo \$1;
+#X msg 43 317 grado \$1;
+#X msg 127 269 arpegio \$1;
+#X msg 136 291 forma \$1;
+#X msg 147 316 on \$1;
+#X obj 255 268 t b b;
+#X obj 255 292 delay 1;
+#X msg 255 313 0;
+#X msg 308 291 1;
+#X msg 255 352 tempo \$1;
+#X obj 111 394 dac~;
+#X connect 0 0 9 0;
+#X connect 1 0 8 0;
+#X connect 2 0 10 0;
+#X connect 3 0 11 0;
+#X connect 4 0 14 0;
+#X connect 5 0 12 0;
+#X connect 6 0 13 0;
+#X connect 7 0 19 0;
+#X connect 7 0 19 1;
+#X connect 8 0 7 0;
+#X connect 9 0 7 0;
+#X connect 10 0 7 0;
+#X connect 11 0 7 0;
+#X connect 12 0 7 0;
+#X connect 13 0 7 0;
+#X connect 14 0 15 0;
+#X connect 14 1 17 0;
+#X connect 15 0 16 0;
+#X connect 16 0 18 0;
+#X connect 17 0 18 0;
+#X connect 18 0 7 0;
+#X coords 0 -1 1 1 293 161 1 41 100;
+#X restore 11 48 pd gui;
