@@ -1,0 +1,3 @@
+[submodule "vendors/beaglebone-pruio"]
+	path = vendors/beaglebone-pruio
+	url = https://github.com/outer-space-sounds/beaglebone-pruio.git
